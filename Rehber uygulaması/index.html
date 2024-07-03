@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href= "skeleton/normalize.css">
+    <link rel="stylesheet" href="skeleton/skeleton.css">
+    <link rel="shortcut icon" href="book-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Rehber Uygulaması</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1 class="head-title">Rehber Uyugulaması</h1>
+
+        <form id="form-guide" action="#">
+            <div class="form-items">
+                <label for="name">Ad :</label>
+                <input type="text" class="name-input u-full-width">
+
+                <label for="surname">Soyad :</label>
+                <input type="text" class="surname-input u-full-width">
+
+                <label for="email">E-posta :</label>
+                <input type="email" class="email-input u-full-width">
+
+                <div class="btn-div"> <button type="submit" class="btn-send button-primary">Ekle</button> </div>
+            </div>
+        </form>
+
+        <hr>
+
+        <table class="info-table u-full-width" id="info-table">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>E-posta</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

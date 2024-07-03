@@ -1,0 +1,138 @@
+:root
+{
+    --main-color: rgba(18, 203, 196,1.0);
+    --main-color-light: rgba(0, 255, 247, 0.5);
+    --accent-color: rgba(247, 159, 31,1.0);
+    --accent-color-light: rgba(247, 159, 31,0.5);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--accent-color-light));
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.main-title
+{
+    font-size: 3rem;
+    color: aqua;
+}
+
+.header, .task-form
+{
+    min-height: 20vh;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-task
+{
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.add-task
+{
+    margin: 0;
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.add-task:hover
+{
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--accent-color-light));
+}
+
+.task-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-list
+{
+    list-style: none;
+    min-width: 40%;
+}
+
+.task-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    background: #00ccff;
+    transition: .5s ease-in-out;
+}
+
+.task-ok
+{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.task-ok:hover
+{
+    background-color: green;
+}
+
+.task-del
+{
+    background-color: red;
+    cursor: pointer;
+}
+
+.task-del:hover
+{
+    background-color: rgb(175, 0, 0);
+}
+
+.task-name
+{
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.task-btn
+{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.task-complated
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fa-solid
+{
+    pointer-events: none;
+}
+
+.dissapear
+{
+    transform: scale(0);
+}

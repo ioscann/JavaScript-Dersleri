@@ -1,0 +1,115 @@
+*{margin: 0;
+padding: 0;}
+
+p{ 
+    text-indent:50px; 
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height:60px;
+    width:100%;
+    list-style-type:none;
+    }
+    
+    li{
+    float:left;
+    }
+    
+    li a{
+    text-decoration:none;
+    color:white;
+    padding-right:32px;
+    padding-left:32px;
+    font-size:20px;
+    background-repeat:no-repeat;
+    display:block;
+    line-height:60px;
+    }
+    
+    li a:hover{
+    color:turquoise;
+    }
+
+.navbar{
+    background-color: rgb(87, 85, 85);
+}
+
+.footer {
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    left :0;
+    text-align: center;
+    padding : 1rem;
+    background :rgb(87, 85, 85);
+    font-size : 19px;
+    color: white;
+  }
+
+.almus{
+    display: flex;
+}
+
+.artova{
+    display: flex;
+}
+
+.basciftlik{
+    display: flex;
+}
+
+.erbaa{
+    display: flex;
+}
+
+.niksar{
+    display: flex;
+}
+
+.pazar{
+    display: flex;
+}
+
+.resadiye{
+    display: flex;
+}
+
+.sulusaray
+{
+    display: flex;
+}
+
+.turhal{
+    display: flex;
+}
+
+.yesilyurt{
+    display: flex;
+}
+
+.zile{
+    display: flex;
+}
+
+.otel1{
+    display: flex;
+}
+
+.otel2{
+    display: flex;
+}
+
+.otel3{
+    display: flex;
+}
+
+
+
+  

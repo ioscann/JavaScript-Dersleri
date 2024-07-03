@@ -1,0 +1,61 @@
+.head-title
+{
+    margin-top: 1rem;
+}
+
+.btn-edit
+{
+    background-color: greenyellow;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.btn-delete
+{
+    background-color: red;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.btn-delete:hover
+{
+    background-color:darkred;
+    cursor: pointer;
+}
+
+.btn-div
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btn-edit:hover
+{
+    background-color: green;
+    cursor: pointer;
+}
+
+.info
+{
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 4px;
+    background-color: transparent;
+    color: black;
+}
+
+.info--success
+{
+    border: 1px solid green;
+}
+
+.info--error
+{
+    border: 1px solid red;
+}
+
+.fa-solid,.fa-regular
+{
+    pointer-events: none;
+}

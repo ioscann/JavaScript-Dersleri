@@ -1,0 +1,133 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-title
+{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+}
+
+body
+{
+    height: 100vh; /* Tüm ekran yüksekliğini kapla */
+    background-image: url("https://cdn.pixabay.com/photo/2023/03/15/20/46/background-7855413_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    min-height: 40vh;
+}
+
+.task-input
+{
+    font-size: 1.5rem;
+    padding: .75rem;
+    border: none;
+    outline: none;
+    background-color: hsl(177, 77%, 44%);
+    color: white;
+    transition: 0.2s;
+}
+
+.task-input:focus
+{
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.task-input::placeholder
+{
+    color: white;   
+}
+
+.add-task
+{
+    border: none;
+    outline: none;
+    padding: .75rem;
+    font-size: 1.5rem;
+    background-color: rgb(182, 23, 182);
+    cursor: pointer;
+}
+
+.task-list
+{
+    list-style: none;
+    min-width: 50%;
+}
+
+.task-name
+{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.task-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    background: #00ccff;
+}
+
+.task-ok
+{
+    font-size: 1.5rem;
+    background-color: greenyellow;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.task-del
+{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background-color: red;
+    padding: .5rem;
+    cursor: pointer;
+
+}
+
+.task-complated
+{
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.fa-solid
+{
+    pointer-events: none;
+}
+
+.fa-star
+{
+    color: white;
+    margin: 1rem;
+}
