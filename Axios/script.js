@@ -237,5 +237,7 @@ function printResult(response){
             </article>
 
         </div>
+
+    </div>
         `
 }
