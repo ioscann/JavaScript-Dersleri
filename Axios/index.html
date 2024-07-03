@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Axios</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
+
   <body>
 
     <div class="container">
@@ -55,7 +59,7 @@
             <div class="column is-mobile -is-vcentered">
 
                 <div class="column"><h1 class="subtitle"> Sonuç </h1></div>
-                <div class="column"><h1 class="title"> ${responce} </h1></div>
+                <div class="column"><h1 class="title"> ${JSON.stringify(response.status)} </h1></div>
 
             </div>
 
@@ -70,7 +74,7 @@
                 </div>
         
                 <div class="message-body">
-                    ${responce.header}
+                    <pre> ${JSON.stringify(response.headers,null,4)} </pre>
                 </div>
             </article>
 
@@ -85,13 +89,7 @@
                 </div>
         
                 <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-                    nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                    diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                    <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                    sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-                    neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    <pre> ${JSON.stringify(response.data,null,4)} </pre>
                 </div>
             </article>
 
@@ -107,17 +105,13 @@
                 </div>
         
                 <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-                    nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                    diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-                    <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                    sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-                    neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                    <pre> ${JSON.stringify(response.config,null,4)} </pre>
                 </div>
             </article>
 
         </div>
+
+    </div>
     -->
     </div>
 
