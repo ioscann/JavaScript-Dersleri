@@ -21,7 +21,7 @@ const myAxios = axios.create({
     headers : {"X-Requested-With" : "XMLHttpRequest", "token" : "anananananan"},
 });
 
-myAxios.get("./users").then(responce => console.log(responce))
+myAxios.get("./users").then(response => console.log(response))
 
 // Bir işlem (get,post vs) yapılmadan önce bir şeyleri değiştirmek istiyorson bunu kullan
 
@@ -34,11 +34,11 @@ axios.interceptors.request.use(config => {
 
 // Bir işlem sonucunda API'den hangi yanıtı aldığını görüp buna göre işlem yapmak istiyorsan bunu kullan 
 
-axios.interceptors.request.use(responce => {
+axios.interceptors.response.use(response => {
 
-    if (responce.status === 200) {responce.status = 999;}
+    if (response.status === 200) {response.status = 999; console.log("çalıştım");}
 
-     return config;
+    return response;
 },error => {return Promise.reject(error)});
 
 // Eğer headerlarını önden tanımlamak istiyorsan bunu kullanabilirsin
@@ -60,7 +60,7 @@ function getData(){
             // url: "https://jsonplaceholder.typicode.com/users_limit2" de yazabilirsin
         }
     })
-    .then(responce => {console.log(responce); printResult(responce)})
+    .then(response => {console.log(response); printResult(response)})
     .catch(err => console.log(err))
     .then(() => console.log("Request finished"));
 }
@@ -73,7 +73,7 @@ function postData(){
     //     body: "Burası body kısmı",
     //     userID: 31
     // })
-    // .then(responce => {console.log(responce); printResult(responce)})
+    // .then(response => {console.log(response); printResult(responce)})
     // .catch(error => console.log(error))
     // .then(() => console.log("Post finished"));
 
@@ -83,8 +83,9 @@ function postData(){
         username: "ioscan",
         email: "anan"
     })
-    .then(responce => printResult(responce))
-    .catch(error => console.log(error));
+    .then(response => printResult(response))
+    .catch(error => console.log(error))
+    .then(() => console.log("Request finished"));
 }
 
 function pushPatchData(){
@@ -95,7 +96,7 @@ function pushPatchData(){
     //     username: "enginar",
     //     email: "baban"
     // })
-    // .then(responce => printResult(responce))
+    // .then(response => printResult(response))
     // .catch(error => console.log(error));
 
     axios.patch("https://jsonplaceholder.typicode.com/posts/1",{ //linkin sonundaki 1 query selector yani 1 numaralı id ye sahip item üzerinde işlem yapılır
@@ -103,16 +104,18 @@ function pushPatchData(){
         username: "enginar",
         email: "baban"
     })
-    .then(responce => printResult(responce))
-    .catch(error => console.log(error));
+    .then(response => printResult(response))
+    .catch(error => console.log(error))
+    .then(() => console.log("Request finished"));
 }
 
 function deleteData(){
     console.log("deleteData --> executed");
 
     axios.delete("https://jsonplaceholder.typicode.com/posts/1",)
-    .then(responce => printResult(responce))
-    .catch(error => console.log(error));
+    .then(response => printResult(response))
+    .catch(error => console.log(error))
+    .then(() => console.log("Request finished"));
 }
 
 function requestSameTimeData(){
@@ -122,7 +125,9 @@ function requestSameTimeData(){
         axios.get("https://jsonplaceholder.typicode.com/users"),
         axios.get("https://jsonplaceholder.typicode.com/posts")
     ])
-    .then(responce => {console.log(responce[0].data); console.log(responce[1].data); printResult(responce[0])})
+    .then(response => {console.log(response[0].data); console.log(response[1].data); printResult(response[0])})
+    .catch(error => console.log(error))
+    .then(() => console.log("Request finished"));
 }
 
 function customHeader(){
@@ -137,8 +142,9 @@ function customHeader(){
         username: "ioscan",
         email: "anan"
     },config)
-    .then(responce => printResult(responce))
-    .catch(error => console.log(error));
+    .then(response => printResult(response))
+    .catch(error => console.log(error))
+    .then(() => console.log("Request finished"));
 
 }
 
@@ -146,8 +152,9 @@ function errorProcesses(){
     console.log("errorProcesses --> executed");
 
     axios("https://jsonplaceholder.typicode.com/userss")
-    .then(responce => printResult(responce))
-    .catch(error => printError(error));
+    .then(response => printResult(response))
+    .catch(error => printError(error))
+    .then(() => console.log("Request finished"));
 }
 
 function printError(error){
@@ -170,7 +177,7 @@ function printError(error){
     `
 }
 
-function printResult(responce){
+function printResult(response){
     document.querySelector(".result").innerHTML = 
     
     `
@@ -179,7 +186,7 @@ function printResult(responce){
             <div class="column is-mobile -is-vcentered">
 
                 <div class="column"><h1 class="subtitle"> Sonuç </h1></div>
-                <div class="column"><h1 class="title"> ${JSON.stringify(responce.status)} </h1></div>
+                <div class="column"><h1 class="title"> ${JSON.stringify(response.status)} </h1></div>
 
             </div>
 
@@ -194,7 +201,7 @@ function printResult(responce){
                 </div>
         
                 <div class="message-body">
-                    <pre> ${JSON.stringify(responce.headers,null,4)} </pre>
+                    <pre> ${JSON.stringify(response.headers,null,4)} </pre>
                 </div>
             </article>
 
@@ -209,7 +216,7 @@ function printResult(responce){
                 </div>
         
                 <div class="message-body">
-                    <pre> ${JSON.stringify(responce.data,null,4)} </pre>
+                    <pre> ${JSON.stringify(response.data,null,4)} </pre>
                 </div>
             </article>
 
@@ -225,7 +232,7 @@ function printResult(responce){
                 </div>
         
                 <div class="message-body">
-                    <pre> ${JSON.stringify(responce.config,null,4)} </pre>
+                    <pre> ${JSON.stringify(response.config,null,4)} </pre>
                 </div>
             </article>
 
